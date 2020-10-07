@@ -1,0 +1,3 @@
+ls -l trybe-exercises
+total 0
+-rw-r--r--  1 tryber  staff  0 Jan 27 00:34 script.js
