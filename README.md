@@ -1,1 +1,1 @@
-# Essa é uma sequência de pastas para os exerciois da Trybe 
+# Essa é uma sequência de pastas para os exercícios da Trybe 
