@@ -1,35 +1,43 @@
-head{
-    font-family: fantasy;
+head {
+  font-family: fantasy;
 }
 
-h1{
-    text-align:center;
+h1 {
+  text-align: center;
 }
 
-h2{
-    text-align: center;
+h2 {
+  text-align: center;
 }
 
-body{
-    background-color: #40916c;
+body {
+  background-color: #40916c;
 }
 
-p{
-    margin:2%
+p {
+  margin: 2%;
 }
 
-img{
-    margin-left: 5%;
+img {
+  margin-left: 5%;
+  display: inline-block;
 }
 
-ul{
-    text-align: center;
-    list-style-type: none;
+ul {
+  text-align: center;
+  list-style-type: none;
 }
 
-ol{
-    float: right;
-    border: 3px solid black;
-    padding: 30px;
-    margin: 20px;
+aside {
+  float: right;
+  border: 3px solid black;
+  padding: 30px;
+  margin: 20px;
+}
+.curiosidade {
+  margin-left: 38%;
+}
+
+#jn {
+  float: right;
 }
