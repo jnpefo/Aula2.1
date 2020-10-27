@@ -3,6 +3,6 @@
 let numbers = [];
 
 for (let n = 0; n < 25; n += 1) {
-    numbers[n] = Math.random;
+    numbers[n] = Math.ceil(Math.random() * 25);
     console.log(numbers[n])
 }
