@@ -6,14 +6,18 @@
 //  ***
 // *****
 
-let n = 5, m = (n + 1) / 2, simb = " ";
+let n = 5, meio = (n + 1) / 2, cEsquerdo = meio, cDireita = meio;
 
-for (let index = 0; index < n; index += 1) {
-    if (index < m) {
-        simb += " ";
-    } else {
-        simb += "*";
+for (let linha = 0; linha < n; linha += 1) {
+    let simb = " ";
+    for (let col = 0; col <= linha; col += 1) {
+        if (col <= cEsquerdo || col >= cDireita) {
+            simb += " ";
+        } else {
+            simb += "*";
+        }
     }
+    cEsquerdo -= 1;
+    cDireita += 1;
     console.log(simb);
 }
-
