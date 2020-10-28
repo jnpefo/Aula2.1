@@ -7,11 +7,9 @@ r = a + b + c;
 
 if (r == 180) {
     v = true;
-    console.log("Isso é um triângulo");
-    console.log(v);
+    console.log("Isso é um triângulo", v);
 } else {
     v = false;
     console.log("Isso não é um triângulo", v);
-    console.log(v);
 }
 

@@ -3,22 +3,34 @@
 let a = 7, b = 6, result;
 
 // Adição
-result = a + b;
-console.log(result);
+function soma(a, b) {
+    return a + b;
+}
+console.log(soma(a,b));
 
 // Subtração
-result = a - b;
-console.log(result);
+function sub(a,b){
+    return a - b;
+}
+console.log(sub(a,b));
 
 // Multiplicação
-result = a * b;
-console.log(result);
+function muti(a,b){
+    return a * b;
+}
+
+console.log(muti(a,b));
 
 // Divisão
-result = a / b;
-console.log(result);
+function divi(a,b){
+    return a / b;
+}
+
+console.log(divi(a,b));
 
 // Módulo
-result = a % b;
-console.log(result);
+function modu(a,b){
+    return a % b;
+}
 
+console.log(modu(a,b));
