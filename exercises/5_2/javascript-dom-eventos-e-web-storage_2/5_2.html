@@ -93,7 +93,7 @@
         let img = document.createElement('img');
         img.src = "https://picsum.photos/200";
         img.className = 'small-image';
-        divMain.appendChild(img);
+        divLeft.appendChild(img);
 
         //8- Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
         let listU = document.createElement('ul');
@@ -112,6 +112,7 @@
         for (let i = 0; i < 3; i += 1) {
             let h3Div = document.createElement('h3');
             h3Div.className = 'description';
+            h3Div.innerHTML = `h3 nº${i}`;
             divMain.appendChild(h3Div);
         }
 
