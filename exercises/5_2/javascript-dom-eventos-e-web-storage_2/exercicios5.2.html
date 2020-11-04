@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="paiDoPai">
+        <div id="pai">
+            <div id="primeiroFilho"></div>
+            <div id="elementoOndeVoceEsta">
+                <div id="primeiroFilhoDoFilho"></div>
+                <div id="segundoEUltimoFilhoDoFilho"></div>
+            </div>
+            Atenção!
+            <div id="terceiroFilho"></div>
+            <div id="quartoEUltimoFilho"></div>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.querySelector('#elementoOndeVoceEsta').parentNode.style.color = "rgb(76, 164, 109)";//1-1 e 2
+    document.querySelector('#primeiroFilho').innerText = "Adicionando texto ao primeiro filho";//1-3
+    document.querySelector('#pai').firstElementChild;//1-4
+    document.querySelector('#elementoOndeVoceEsta').previousElementSibling;//1-5
+    document.querySelector('#elementoOndeVoceEsta').firstChild;//1-6
+    document.querySelector('#elementoOndeVoceEsta').nextElementSibling//1-7
+    document.querySelector('#pai').childNodes[5];//1-8
+
+    let irmaoElementoOndeVoceEsta = document.createElement("div");
+    document.querySelector('#pai').appendChild(irmaoElementoOndeVoceEsta);
+    irmaoElementoOndeVoceEsta.id = "irmaoElementoOndeVoceEsta"//2-1
+
+    let filhoElementoOndeVoceEsta = document.createElement("div");
+    document.querySelector('#elementoOndeVoceEsta').appendChild(filhoElementoOndeVoceEsta);
+    filhoElementoOndeVoceEsta.id = "filhoElementoOndeVoceEsta"//2-2
+
+    let filhoPrimeiroFilhoDoFilho = document.createElement("div");
+    document.querySelector('#primeiroFilhoDoFilho').appendChild(filhoPrimeiroFilhoDoFilho);
+    filhoPrimeiroFilhoDoFilho.id = "filhoPrimeiroFilhoDoFilho";//2-3
+
+    document.querySelector('#filhoPrimeiroFilhoDoFilho').parentNode.parentNode.parentNode.childNodes[5];//2-4
+
+    document.querySelector('#pai').removeChild(terceiroFilho);
+    document.querySelector('#pai').removeChild(quartoEUltimoFilho);
+    document.querySelector('#pai').removeChild(primeiroFilho);
+    document.querySelector('#pai').removeChild(irmaoElementoOndeVoceEsta);
+    document.querySelector('#elementoOndeVoceEsta').removeChild(filhoElementoOndeVoceEsta);
+    document.querySelector('#elementoOndeVoceEsta').removeChild(segundoEUltimoFilhoDoFilho);
+    //3-1
+
+</script>
+<!-- 
+Depois do Vídeo 2
+1 - Acesse o elemento elementoOndeVoceEsta.
+2- Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+3- Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+4- Acesse o primeiroFilho a partir de pai.
+5- Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+6- Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+7- Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+8- Agora acesse o terceiroFilho a partir de pai. 
+
+Depois do Vídeo 2
+1- Crie um irmão para elementoOndeVoceEsta.
+2- Crie um filho para elementoOndeVoceEsta.
+3- Crie um filho para primeiroFilhoDoFilho.
+4- A partir desse filho criado, acesse terceiroFilho.
+
+Depois do Vídeo 3
+1- Remova todos os elementos da página, menos pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
+-->
+
+</html>
