@@ -11,8 +11,8 @@
   <form action="" method="get">
     <fieldset>
       <legend>Dados Pessoais</legend>
-      <label for="name">Nome</label>
-      <input type="text" name="nome" id="name" maxLength="40" required>
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" id="nome" maxLength="40" required>
 
       <label for="mail">E-mail</label>
       <input type="email" name="email" id="mail" maxLength="50" required>
@@ -31,8 +31,8 @@
 
       <fieldset>
         <legend>Moradia</legend>
-        <label for="moradia">Casa</label>
-        <input type="radio" name="moradia" id="moradia">
+        <label for="casa">Casa</label>
+        <input type="radio" name="moradia" id="casa">
         <label for="apartamento">Apartamento</label>
         <input type="radio" name="moradia" id="apartamento">
       </fieldset>
@@ -55,16 +55,13 @@
       <label for="data">Data</label>
       <input type="date" name="data" id="data" required>
     </fieldset>
-    <button type="submit">Enviar</button>
+    <button type="submit" id="montarcv">Montar Currículo</button>
   </form>
+  <section>
+    <div id="resumo">
+    </div>
+  </section>
   <script src="script.js"></script>
 </body>
 
 </html>
-
-<!--
- Logo abaixo do formulário, crie um botão que:
-  *Chame uma função JavaScript e interrompa o fluxo automático do form utilizando o preventDefault().
-  *Execute as validações que foram pedidas ao longo da montagem do formulário.
-  *Monte uma <div> com o consolidado dos dados que foram inseridos no formulário.
-  -->
