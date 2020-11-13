@@ -18,12 +18,12 @@ window.onload = function () {
   function montaCV() {
     let dados = selecionaTudo();
 
-    let divResumo = document.querySelector("#resumo");
+    let divResumo = document.querySelector("#resumoCv");
     divResumo.innerHTML = "";
 
     for (let valor of dados) {
       let p = document.createElement("p");
-      p.innerHTML += valor.value;
+      p.innerHTML = valor.value;
       divResumo.appendChild(p);
     };
   }
