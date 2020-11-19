@@ -19,3 +19,9 @@
     background: #f00;
   }
 }
+
+@media screen and (orientation: landscape) {
+  .centro{
+    background: grey;
+  }
+}
