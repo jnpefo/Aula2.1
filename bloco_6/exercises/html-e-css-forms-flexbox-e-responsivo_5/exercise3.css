@@ -45,7 +45,7 @@
 #content-container {
   float: left;
   width: 100%;
-  background: #FFF;
+  background: #fff;
 }
 
 #content {
@@ -82,11 +82,13 @@
 }
 
 @media print {
-  #header, #navigation, #footer{
-    display: none ;
+  #header,
+  #navigation,
+  #footer {
+    display: none;
   }
 
-  #content-container{
+  #content-container {
     display: flex;
     flex-direction: column;
   }
@@ -94,7 +96,77 @@
   #content {
     width: 95%;
   }
-  
 }
 
-/* Os elementos com id header, navigation e footer devem desaparecer; */
+@media screen and (max-width: 240px) {
+  #aside {
+    display: none;
+  }
+
+  body {
+    padding: none;
+  }
+
+  img {
+    width: 164%;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  a {
+    width: 100%;
+  }
+
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  #navigation {
+    margin-top: 75px;
+  }
+}
+
+@media screen and (max-width: 360px) and (min-width: 241px) {
+  #aside {
+    display: none;
+  }
+
+  body {
+    padding: none;
+  }
+
+  img {
+    width: 140%;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  a {
+    width: 100%;
+  }
+
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85%;
+  }
+
+  #navigation {
+    margin-top: 75px;
+    width: 98%;
+  }
+
+  #footer{
+    width: 85%;
+  }
+}
+
