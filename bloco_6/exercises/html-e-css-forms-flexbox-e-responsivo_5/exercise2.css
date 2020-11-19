@@ -6,3 +6,81 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+body {
+  background: blue;
+  margin: 7%;
+  font-size: 20px;
+}
+
+.title{
+  text-align: center;
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+@media screen and (max-width: 360px) {
+  body {
+    background: green;
+    margin: 2%;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2,
+  header,
+  header nav ul li {
+    text-align: center;
+  }
+
+  header nav ul li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 60px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 760px) and (min-width: 361px) {
+  body {
+    background: red;
+    margin: 5%;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2,
+  header {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 40px;
+  }
+
+  h3 {
+    font-size: 35px;
+  }
+}
+
+
