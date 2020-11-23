@@ -1,0 +1,27 @@
+@media screen and (min-width: 320px) and (max-width: 568px) {
+  .centro {
+    width: 100%;
+  }
+
+  .topo {
+    width: 100vw;
+    background: #ff0;
+  }
+
+  .topo h1 {
+    color: #f00;
+  }
+
+  .colunas2 {
+    width: 100%;
+    margin-top: 5px;
+    flex-direction: column;
+    background: #f00;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .centro{
+    background: grey;
+  }
+}
