@@ -70,16 +70,29 @@ const lesson3 = {
 const procura = (objeto, chave, valor) => {
   const key = Object.keys(objeto);
   const values = Object.values(objeto);
+  let rKey = false;
+  let rValue = false;
 
-  if (key.includes(chave) && values.includes(valor)) {
-    return true;
+  for (let i in key) {
+    if (key[i] === chave) {
+      rKey = true;
+    }
   }
-  return false;
+  for (let i in values) {
+    if (values[i] === valor) {
+      rValue = true;
+    }
+  }
 
+  if (rKey && rValue) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
 
-console.log(procura(lesson3, 'turno', 'dia'));
+console.log(procura(lesson3, 'turno', 'noite'));
 
 // Output: true,
