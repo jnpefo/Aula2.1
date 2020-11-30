@@ -63,23 +63,16 @@ const books = [
   },
 ];
 
-const expected_result = {
-  author: {
-    birthYear: 1948,
-    name: 'George R. R. Martin'
-  },
-  genre: 'Fantasia',
-  id: 1,
-  name: 'As Crônicas de Gelo e Fogo',
-  releaseYear: 1991
-};
+// Faça uma função que retorne true, se todas as pessoas autoras nasceram no século XX, ou false, caso contrário.
 
-// Encontre o primeiro livro cujo nome possui 26 caracteres.
+const expectedResult = false
 
-function getNamedBook(books) {
-  let test = books.find((book) => book.name.length === 26);
-  console.log(test);
-  return test
+function everyoneWasBornOnSecXX() {
+  const result = books.every(book => (
+    book.author.birthYear > 1900 && book.author.birthYear <= 2000
+  ));
+  console.log(result);
+  return result;
 }
 
-assert.deepEqual(getNamedBook(books), expected_result);
+assert.equal(everyoneWasBornOnSecXX(), expectedResult);
