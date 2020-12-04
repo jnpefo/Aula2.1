@@ -93,6 +93,6 @@ const procura = (objeto, chave, valor) => {
 
 // Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
 
-console.log(procura(lesson3, 'turno', 'dia'));
+console.log(procura(lesson3, 'turno', 'noite'));
 
 // Output: true,
