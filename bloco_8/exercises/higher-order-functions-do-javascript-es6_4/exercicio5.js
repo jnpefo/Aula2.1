@@ -1,10 +1,17 @@
 const assert = require('assert')
 
-const myList = [1, 2, 3]
+const myList = [1, 2, 3];
 
-// escreva swap abaixo
+// const swap = (array) => {
+//   const  = array;
+//   return [c, b, a];
+// };
 
-const swappedList = swap(myList)
+const swap = ([a, b, c]) => [c, b, a];
+
+const swappedList = swap(myList);
+
+console.log(swappedList);
 
 assert.strictEqual(swappedList[0], 3)
 assert.strictEqual(swappedList[1], 2)
