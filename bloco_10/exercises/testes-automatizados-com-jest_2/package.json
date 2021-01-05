@@ -1,0 +1,15 @@
+{
+  "name": "testes-automatizados-com-jest_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "just": "^0.1.8"
+  }
+}
