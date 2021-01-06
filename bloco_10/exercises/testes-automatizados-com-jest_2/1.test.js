@@ -1,8 +1,7 @@
-const uppercase = require('./1.test.js');
+const uppercase = require('./1.js');
 
-test(`Teste para verificar se às letras de uma palavra fica em maiúsculas`, (done) => {
-  uppercase('palavra', (str) => {
+test(`Teste para verificar se às letras de uma palavra fica em maiúsculas`, () => {
+  return uppercase('palavra', (str) => {
     expect(str).toBe('PALAVRA');
-    done();
   });
 });
