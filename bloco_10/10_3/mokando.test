@@ -1,0 +1,29 @@
+let obj = require('./mokando.js');
+
+// obj = jest.fn();
+test('retorna true para numero divisivel por 2', () => {
+
+  console.log(isDivisible(2))
+  expect(obj.isDivisible(2)).toBe(true);
+  expect(obj.randomNumber).toHaveBeenCalled();
+})
+
+
+// test('teste no obj e isDivisible', () => {
+//   obj.isDivisible = jest.fn()
+//   // .mockReturnValue(8)
+//   // .mockReturnValueOnce(14)
+//   // .mockReturnValueOnce(12)
+
+
+//   expect(obj.isDivisible(2)).toBe(true);
+//   expect(obj).toHaveBeenCalled();
+//   expect(isDivisible(2)).toBe(true);
+//   expect(isDivisible(2)).toBe(false);
+//   expect(isDivisible(1)).toBe(false);
+// })
+
+
+// Teste que, quando a randomNumber() retorna um número par e isDivisible() recebe um dois, o retorno é true . ++
+// Feito isso, escreva um teste que verifica que a função randomNumber() é chamada quando invocamos a isDivisible() . ++
+// Simule ( mocke ) dois valores para a função randomNumber() retornar e um terceiro valor default. Chame a função isDivisible() quatro vezes num mesmo teste e cheque que os retornos são conforme esperado.
