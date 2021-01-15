@@ -5,7 +5,6 @@ class App extends React.Component {
   constructor() {
     super()
     this.handleClick = this.handleClick.bind(this)
-    
     this.handleClick1 = this.handleClick1.bind(this)
     this.handleClick2 = this.handleClick2.bind(this)
     this.state = {
@@ -15,29 +14,36 @@ class App extends React.Component {
     }
   }
 
-  handleClick() {
+  handleClick(e) {
     this.setState((estadoAnterior, _props) => ({
       numeroDeCliques: estadoAnterior.numeroDeCliques + 1
     }))
+    console.log(e.target.style.backgroundColor);
   }
 
-  handleClick1() {
+  handleClick1(e) {
     this.setState((estadoAnterior1, _props) => ({
       numeroDeCliques1: estadoAnterior1.numeroDeCliques1 + 1
-    }))
+    }), () => {
+      console.log(e.target.style.backgroundColor)
+    })
   }
 
-  handleClick2() {
+  handleClick2(e) {
     this.setState((estadoAnterior2, _props) => ({
       numeroDeCliques2: estadoAnterior2.numeroDeCliques2 + 1
     }))
+    console.log(e.target.style.backgroundColor)
   }
   render() {
+    const { numeroDeCliques, numeroDeCliques1, numeroDeCliques2 } = this.state
     return (
       <div>
-        <button onClick={this.handleClick} className={this.state.numeroDeCliques % 2 === 0 ? "color" : "padrao"}>{this.state.numeroDeCliques}</button>
-        <button onClick={this.handleClick1} className={this.state.numeroDeCliques1 % 2 === 0 ? "color" : "padrao"}>{this.state.numeroDeCliques1}</button>
-        <button onClick={this.handleClick2} className={this.state.numeroDeCliques2 % 2 === 0 ? "color" : "padrao"}>{this.state.numeroDeCliques2}</button>
+        <button onClick={this.handleClick} style={numeroDeCliques % 2 === 0 ? {backgroundColor: "green"} : {backgroundColor: "rgb(239, 239, 239)"}}>{numeroDeCliques}</button>
+
+        <button onClick={this.handleClick1} style={numeroDeCliques1 % 2 === 0 ? {backgroundColor: "green"} : {backgroundColor: "blue"}}>{numeroDeCliques1}</button>
+
+        <button onClick={this.handleClick2} style={numeroDeCliques2 % 2 === 0 ? {backgroundColor: "green"} : {backgroundColor: "blue"}}>{numeroDeCliques2}</button>
       </div>
       )
   }
@@ -56,4 +62,3 @@ export default App;
 // 8 - Defina uma lógica que estabeleça que, quando o número de cliques no botão for par, ele deve ser verde.
 // 9 - A cor atual do botão deve ser impressa num console.log() de dentro da função do evento que lida com o clique. Faça isso acontecer!
 // 🦜 Dica: Lembre-se de substituir a referência à função, no evento, por uma callback que invoca!
-// Agora bora pra aula ao vivo e depois pros exercícios?! Hoje nós vamos incrementar a nossa Pokedex!
