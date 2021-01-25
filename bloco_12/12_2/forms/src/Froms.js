@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
+
 import Estado from './Estado'
+import MeConteAlgumaCoisa from './MeConteAlgumaCoisa'
+import Idade from './Idade'
+import VaiComparecer from './VaiComparecer'
 
 class Form extends Component {
   constructor() {
@@ -26,41 +30,22 @@ class Form extends Component {
   }
 
   render() {
+    // const { value, handleChange } = this.props
     return (
       <div>
         <h1>Criando formulario</h1>
         <form className="form">
           <fieldset>
             <legend>Teste</legend>
-            <Estado />
+            <Estado value={this.state.estadoFavorito} handleChange={this.handleChange} />
             <br />
-            <label>
-              Me conte alguma coisa! =)
-              <br />
-              <textarea 
-                name="meConteAlgo"  
-                value={this.state.meConteAlgo} 
-                onChange={this.handleChange} 
-              />
-            </label>
+            <MeConteAlgumaCoisa value={this.state.meConteAlgo} handleChange={this.handleChange}/>
             <br />
             Idade
             <br />
-            <input
-              type="number"
-              name="idade"
-              value={this.state.idade}
-              onChange={this.handleChange}
-            />
+            <Idade value={this.state.idade} handleChange={this.handleChange} />
             <br />
-            Vai Comparecer  
-            <br />
-            <input
-              type="checkbox"
-              name="vaiComparecer"
-              value={this.state.vaiComparecer}
-              onChange={this.handleChange}
-            />
+            <VaiComparecer value={this.state.vaiComparecer} handleChange={this.handleChange} />
             <br />
             <input type="file" />
           </fieldset>
