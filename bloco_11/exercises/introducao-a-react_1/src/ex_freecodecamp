@@ -1,0 +1,179 @@
+// ex 1
+const JSX = <h1>Hello JSX!</h1>;
+
+// ex 2
+
+const JSX = <div>
+  <h1>Hello JSX!</h1>
+  <p> Lista </p>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+</div>
+
+
+// ex 3
+
+const JSX = (
+  <div>
+    <h1>This is a block of JSX</h1>
+    <p>Here's a subtitle</p>
+    {/*
+  Comentário
+  */}
+  </div>
+);
+
+// ex 4
+
+const JSX = (
+  <div>
+    <h1>Hello World</h1>
+    <p>Lets render this to the DOM</p>
+  </div>
+);
+// Change code below this line
+
+ReactDOM.render(JSX, document.getElementById("challenge-node"));
+
+// ex 5
+
+const JSX = (
+  <div className='myDiv'>
+    <h1>Add a class to this div</h1>
+  </div>
+);
+
+// ex 6
+
+const JSX = (
+  <div>
+    <h2>Welcome to React!</h2> <br />
+    <p>Be sure to close all tags!</p>
+    <hr />
+  </div>
+);
+
+// ex 7
+
+const MyComponent = function () {
+  // Change code below this line
+  return (
+    <div>
+      teste react
+    </div>
+  )
+
+  // Change code above this line
+}
+
+// ex 8
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    // Change code below this line
+    return (
+      <div>
+        <h1>Hello React!</h1>
+      </div>
+    );
+
+    // Change code above this line
+  }
+};
+
+// ex 9
+
+const ChildComponent = () => {
+  return (
+    <div>
+      <p>I am the child</p>
+    </div>
+  );
+};
+
+class ParentComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h1>I am the parent</h1>
+        { /* Change code below this line */}
+        <ChildComponent />
+
+        { /* Change code above this line */}
+      </div>
+    );
+  }
+};
+
+// Bonus
+
+function Card(props) {
+  return (
+    <div className="card">
+      <img className="card-img-top" src={props.featureImage} alt={props.title} />
+      <div className="card-body">
+        <h5 className="card-title">{props.title}</h5>
+        <p className="card-text">{props.description}</p>
+        <a href={props.link} className="btn btn-primary">Learn more</a>
+      </div>
+    </div>
+  );
+}
+
+function CardList() {
+  return (
+    <div className="row">
+      <div className="col-sm-4">
+        <Card
+          featureImage="https://sebhastian.com/interactive-react-form/feature-image_hue33e11405e59e7e16f738f1cad0175c2_45614_825x0_resize_box_2.png"
+          title="How To Make Interactive ReactJS Form"
+          description="Let's write some interactive form with React"
+          link="https://sebhastian.com/interactive-react-form"
+        />
+      </div>
+      <div className="col-sm-4">
+        <Card
+          featureImage="https://sebhastian.com/babel-guide/feature-image_hu2bad8f6979fb0b7ed7c55d5d78fd5168_30885_825x0_resize_box_2.png"
+          title="Babelify your JavaScript code"
+          description="Babel make JavaScript code browser-compatible."
+          link="https://sebhastian.com/babel-guide"
+        />
+      </div>
+      <div className="col-sm-4">
+        <Card
+          featureImage="https://sebhastian.com/js-before-react/feature-image_hu387dfd4d036bf3c90a587203ee8af13c_17864_825x0_resize_box_2.png"
+          title="JavaScript Basics Before You Learn React"
+          description="Learn the prerequisites of learning React fast"
+          link="https://sebhastian.com/js-before-react"
+        />
+      </div>
+      <div className="col-sm-4">
+        <Card
+          featureImage="https://sebhastian.com/git-quick-intro/feature-image_hu73e7a6481bdc26a2269b76524120988f_42353_825x0_resize_box_2.png"
+          title="Quick Introduction To Git"
+          description="Git software is a version control system (or VCS), a type of software designed to track changes among selected files"
+          link="https://sebhastian.com/git-quick-intro/"
+        />
+      </div>
+      <div className="col-sm-4">
+        <Card
+          featureImage="https://sebhastian.com/about/as-seen-black.png"
+          title="Write and teach everything you know"
+          description="My name is Nathan Sebhastian and I’m a professional with broad set of skills in software and web development."
+          link="https://sebhastian.com/about/"
+        />
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.render(<CardList />, document.getElementById('root'))
