@@ -1,7 +1,18 @@
 import { IMPUT } from '../action/index';
 
 const INITIAL_STATE = {
-  //estado inicial
+  name: '',
+  email: '',
+  cpf: '',
+  address: '',
+  city: '',
+  countryState: '',
+  addressType: '',
+  resume: '',
+  role: '',
+  roleDescription: '',
+  formError: {},
+  submitted: false,
 }
 
 export default function imputsReducer(state = INITIAL_STATE, action) {

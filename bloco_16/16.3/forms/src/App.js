@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
+// import { Provider } from 'react-redux';
 import './App.css';
 import Form from './Form';
 import FormError from './FormError';
@@ -79,7 +79,7 @@ class App extends Component {
     const { submitted } = this.state;
 
     return (
-      <Providerer store={ store }>
+      <Provider store={ store }>
         <main>
           <Form
             sendForm={this.sendForm}
@@ -93,7 +93,7 @@ class App extends Component {
           </div>
           { submitted && <FormDataDisplay currentState={ this.state } /> }
         </main>
-      </Providerer>
+      </Provider>
     );
   }
 }
