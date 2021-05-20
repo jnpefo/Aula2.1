@@ -26,7 +26,6 @@ const users = [
 app.put('/user/:id', (req, res, _next) => {
   const result = users.find((user) => user.id == req.params.id )
   const { status } = req.body
-  console.log(status)
   if(result === undefined) {
     return res.status(400).json({ error: "user isn't found" })
   } 
@@ -38,6 +37,6 @@ app.put('/user/:id', (req, res, _next) => {
 })
 
 
-app.listen(3000, () => {
-  console.log('listen on 3000');
+app.listen(3001, () => {
+  console.log('listen on 3001');
 })
