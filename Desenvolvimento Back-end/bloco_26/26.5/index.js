@@ -27,7 +27,7 @@ app.put('/user/:id', (req, res, _next) => {
   const result = users.find((user) => user.id == req.params.id )
   const { status } = req.body
   if(result === undefined) {
-    return res.status(400).json({ error: "user isn't found" })
+    return res.status(404).json({ error: "user isn't found" })
   } 
   if(typeof status !== "boolean") {
     return res.status(400).json({ error: "status isn't a boolean" })
