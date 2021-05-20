@@ -29,7 +29,7 @@ app.put('/user/:id', (req, res, _next) => {
   if(result === undefined) {
     return res.status(400).json({ error: "user isn't found" })
   } 
-  if(typeof result.isActive !== "boolean") {
+  if(typeof status !== "boolean") {
     return res.status(400).json({ error: "status isn't a boolean" })
   } 
   result.isActive = status
