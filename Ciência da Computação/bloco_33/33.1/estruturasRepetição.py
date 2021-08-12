@@ -18,10 +18,12 @@ for index in range(5):
 
 min_rating = 3.0
 filtered_restaurants = [
-    restaurant for restaurant in restaurants if restaurant["nota"] > min_rating
+    restaurant
+        for restaurant in restaurants
+            if restaurant["nota"] > min_rating
 ]
 print(filtered_restaurants)  # imprime a lista de restaurantes, sem o B e D
-##por não deu o append?
+##por não deu o append? linst comprehension
 # Isto é equivalente às operações de map e filter em JavaScript.
 
 

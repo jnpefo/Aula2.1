@@ -1,4 +1,6 @@
-#!/home/franco/Documentos/python/.venv/bin/python3
+#!/bin/sh
+'''exec' "/home/franco/trybe-exercises/Ciência da Computação/bloco_33/33.1/.venv/bin/python3" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

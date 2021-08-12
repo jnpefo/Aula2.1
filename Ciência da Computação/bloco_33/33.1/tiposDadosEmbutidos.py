@@ -155,3 +155,16 @@ valor = ("Thiago", "Nobre", 29)
 print(valor)
 
 # Exercício 12: Realizar a contagem de quantas vezes cada elemento aparece em uma sequência é uma técnica muito útil na solução de alguns problemas. Qual é a estrutura mais recomendada para o armazenamento desta contagem?
+
+lista = [1, 2, 5, 5, 7, 7, 8, 9, 9, 9]
+
+disci = {}
+
+for elemento in lista:
+    cont = 0
+    if not elemento in disci:
+        disci[elemento] = cont
+    if elemento in disci:
+        disci[elemento] += 1
+
+print(disci)
