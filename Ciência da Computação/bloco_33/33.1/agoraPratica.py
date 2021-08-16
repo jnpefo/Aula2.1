@@ -19,7 +19,7 @@ def average(list):
     result = 0
     for number in list:
         result += number
-        return result / len(list)
+    return result / len(list)
 
 print(average([1, 5]))
 
