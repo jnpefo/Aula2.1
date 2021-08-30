@@ -11,3 +11,7 @@ function getUserMiddleware (req, res, next) {
 
     return res.status(200).jon(user);
 }
+
+module.exports = {
+    getUserMiddleware,
+};
