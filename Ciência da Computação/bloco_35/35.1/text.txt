@@ -1,0 +1,6 @@
+Req1
+curl localhost:5000
+
+Req2
+curl localhost:5000 -X POST -H "Content-type: application/json" -d '{ "email": "fulano@gmail.com" }'
+curl -i -H "Content-Type: application/json" -X POST -d '{"userId":"1", "username": "fizz bizz"}' http://localhost:5000
